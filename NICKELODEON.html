@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nick Classic - Disney XD World</title>
+    <style>
+        /* Eliminamos los márgenes para que ocupe todo */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Evita doble scroll */
+            background-color: #000;
+        }
+
+        /* Configuramos el marco para que sea pantalla completa */
+        #archivo-web {
+            width: 100%;
+            height: 100vh;
+            border: none;
+        }
+
+        /* Botón flotante para volver (opcional) */
+        .btn-volver {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 10px 20px;
+            background: #0f0;
+            color: #000;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 100;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <iframe 
+        id="archivo-web" 
+        src="https://web.archive.org/web/20220630233934/https://www.nick.com/" 
+        title="Nickelodeon REMAKE">
+    </iframe>
+
+</body>
+</html>
