@@ -3,49 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nick Classic - Disney XD World</title>
+    <title>Nickelodeon - Modo Incrustado</title>
     <style>
-        /* Eliminamos los márgenes para que ocupe todo */
+        /* Quitamos los bordes y márgenes del navegador */
         body, html {
             margin: 0;
             padding: 0;
             height: 100%;
-            overflow: hidden; /* Evita doble scroll */
+            width: 100%;
+            overflow: hidden; /* Para que no haya doble barra de desplazamiento */
             background-color: #000;
         }
 
-        /* Configuramos el marco para que sea pantalla completa */
-        #archivo-web {
+        /* Contenedor que ocupa toda la pantalla */
+        .contenedor-web {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            height: 100vh;
-            border: none;
+            height: 100%;
         }
 
-        /* Botón flotante para volver (opcional) */
-        .btn-volver {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            padding: 10px 20px;
-            background: #0f0;
-            color: #000;
-            font-family: Arial, sans-serif;
-            font-weight: bold;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            z-index: 100;
-            text-decoration: none;
+        /* El frame donde vive la web de Nick */
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none; /* Sin bordes feos */
         }
     </style>
 </head>
 <body>
 
-    <iframe 
-        id="archivo-web" 
-        src="https://web.archive.org/web/20220630233934/https://www.nick.com/" 
-        title="Nickelodeon REMAKE">
-    </iframe>
+    <div class="contenedor-web">
+        <iframe 
+            src="https://web.archive.org/web/20220630233934/https://www.nick.com/" 
+            allowfullscreen>
+        </iframe>
+    </div>
 
 </body>
 </html>
